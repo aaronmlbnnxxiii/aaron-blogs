@@ -20,7 +20,7 @@ export function PageComponent({ projects }: any) {
   );
 }
 
-export default async function Page() {
+export default function Page() {
   // List of files in blgos folder
   const filesInprojects = fs.readdirSync("./content/projects");
 
