@@ -21,7 +21,7 @@ export function PageComponent({ frontmatter, markdown }) {
 export default async function Page({ params }) {
   const { slug } = params;
   const fileContent = matter(
-    fs.readFileSync(`./content/blogs/${slug}.md`, "utf8")
+    fs.readFileSync(`./content/projects/${slug}.md`, "utf8")
   );
   let frontmatter = fileContent.data;
   const markdown = fileContent.content;
@@ -30,7 +30,7 @@ export default async function Page({ params }) {
 }
 
 export async function generateStaticParams() {
-  const filesInProjects = fs.readdirSync("./content/blogs");
+  const filesInProjects = fs.readdirSync("./content/projects");
 
   const paths = filesInProjects.map((file) => {
     const filename = file.slice(0, file.indexOf("."));

@@ -1,5 +1,5 @@
 export default {
-  title: "Aaron Blogs",
+  title: "Aaron projects",
   author: {
     name: "Aaron Jay Malabanan",
     summary: "Who loves coding and exploring technologies.",
