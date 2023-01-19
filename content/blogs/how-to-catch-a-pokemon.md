@@ -1,5 +1,5 @@
 ---
-title: How to catch a gyarados
+title: I want to catch gyarados!!!!!!!!
 date: August 5, 2021 1:24 PM
 ---
 
