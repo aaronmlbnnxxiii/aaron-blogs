@@ -5,12 +5,10 @@ import styles from "./styles/Home.module.css";
 
 export function PageComponent({ blogs }) {
   return (
-    <div className={styles["container"]}>
-      <h1 className={styles["header"]}>Welcome to my blog</h1>
-      <p className={styles["subtitle"]}>
-        This is a subtitle idk what to type here
-      </p>
-      <ul className={styles["blog-list"]}>
+    <div className="h-screen flex justify-center items-center flex-col">
+      <h1>Welcome to my blog</h1>
+      <p>This is a subtitle idk what to type here</p>
+      <ul className="flex flex-col gap-y-2 text-cyan-500 font-bold">
         {blogs?.map((blog) => (
           <li key={blog.slug}>
             <Link href={`/blog/${blog.slug}`}>
@@ -38,5 +36,5 @@ export default async function Page() {
     };
   });
 
-  return <PageComponent blogs={blogs}/>
+  return <PageComponent blogs={blogs} />;
 }
