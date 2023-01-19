@@ -2,9 +2,14 @@ import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 
-export function PageComponent({ projects }: any) {
+
+
+
+
+
+const PageComponent = ({ projects }: any) => {
   return (
-    <div className="h-screen flex justify-center items-center flex-col">
+    <div className="h-screen flex justify-center items-center flex-col" >
       <h1>Welcome to my blog</h1>
       <p>This is a subtitle idk what to type here</p>
       <ul className="flex flex-col gap-y-2 text-cyan-500 font-bold">
@@ -20,7 +25,7 @@ export function PageComponent({ projects }: any) {
   );
 }
 
-export default function Page() {
+export const Page = async () => {
   // List of files in blgos folder
   const filesInprojects = fs.readdirSync("./content/projects");
 
@@ -37,3 +42,5 @@ export default function Page() {
 
   return <PageComponent projects={projects} />;
 }
+
+export default Page
